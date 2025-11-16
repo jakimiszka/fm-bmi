@@ -1,10 +1,10 @@
 /*  Mobile first  */
 .container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: red;
 
     gap: var(--spacing-200);
     margin-left: auto;
@@ -14,11 +14,39 @@
 
     @include breakpoint(medium) {
         max-width: 820px;
-        background-color: blue;
     }
 
     @include breakpoint(large) {
         max-width: 1110px;
-        background-color: yellow;
     }
+}
+
+.grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "a b b"
+        "c d d"
+        "c d d";
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.grid-a{
+    grid-area: a;
+    background-color: red;
+}
+.grid-b{
+    grid-area: b;
+    background-color: blue;
+}
+.grid-c{
+    grid-area: c;
+    background-color: green;
+}
+.grid-d{
+    grid-area: d;
+    background-color: yellow;
 }

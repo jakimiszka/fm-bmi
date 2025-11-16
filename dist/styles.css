@@ -10,10 +10,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100%;
   font-family: "Kumbh Sans", sans-serif;
-  display: flex;
 }
 
 h1 {
@@ -43,29 +40,33 @@ ul {
 :root {
   --black: black;
   --white: white;
-  --grey-50: hsl(223, 35%, 81%);
-  --grey-100: hsl(219, 35%, 92%);
-  --grey-300: hsl(221, 22%, 81%);
-  --grey-500: hsl(219, 9%, 45%);
-  --grey-950: hsl(220, 13%, 13%);
-  --orange-300: hsl(25, 100%, 71%);
-  --orange-500: hsl(26, 100%, 55%);
+  --grey-500: hsl(215, 17%, 45%);
+  --grey-300: hsl(215, 43%, 77%);
+  --blue-100: hsl(228, 94%, 94%);
+  --blue-300: hsl(209, 69%, 82%);
+  --blue-500: hsl(227, 92%, 58%);
+  --blue-900: hsl(215, 31%, 21%);
+  --gradient: linear-gradient(to right, hsl(183, 95%, 92%), hsl(216, 95%, 92%));
   --font-size-1: 9rem;
   --font-size-2: 4rem;
-  --font-size-3: 2.25rem;
-  --font-size-4: 1.75rem;
-  --font-size-5: 1.5rem;
-  --font-size-6: 1.25rem;
-  --font-size-7: 1rem;
-  --font-size-8: .938rem;
-  --font-size-9: .813rem;
-  --font-size-10: .75rem;
-  --line-height-1: 48px;
-  --line-height-2: 32px;
-  --line-height-3: 26px;
+  --font-size-3: 3rem;
+  --font-size-4: 2.25rem;
+  --font-size-5: 1.75rem;
+  --font-size-6: 1.75rem;
+  --font-size-7: 1.5rem;
+  --font-size-8: 1.25rem;
+  --font-size-9: 1rem;
+  --font-size-10: .938rem;
+  --font-size-11: .875rem;
+  --font-size-12: .813rem;
+  --font-size-13: .75rem;
+  --line-height-1: 110%;
+  --line-height-2: 120%;
+  --line-height-3: 150%;
   --line-height-4: 16px;
   --line-height-5: 15px;
-  --letter-spacing: 0;
+  --letter-spacing-0: 0%;
+  --letter-spacing-1: -5%;
   --spacing-0: 0rem;
   --spacing-10: 0.0625rem;
   --spacing-20: 0.125rem;
@@ -76,9 +77,13 @@ ul {
   --spacing-400: 2rem;
   --spacing-500: 2.5rem;
   --spacing-600: 3rem;
+  --spacing-650: 3.5rem;
   --spacing-700: 4rem;
+  --spacing-800: 4.5rem;
   --spacing-1000: 5rem;
+  --spacing-1100: 5.5rem;
   --spacing-1200: 6rem;
+  --spacing-1300: 6.5rem;
   --spacing-1500: 7.5rem;
   --spacing-1600: 8rem;
   --spacing-1800: 9rem;
@@ -103,11 +108,11 @@ ul {
 
 /*  Mobile first  */
 .container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: red;
   gap: var(--spacing-200);
   margin-left: auto;
   margin-right: auto;
@@ -117,12 +122,69 @@ ul {
 @media (min-width: 820px) {
   .container {
     max-width: 820px;
-    background-color: blue;
   }
 }
 @media (min-width: 1024px) {
   .container {
     max-width: 1110px;
-    background-color: yellow;
   }
+}
+
+.grid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "a b b" "c d d" "c d d";
+  gap: 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.grid-a {
+  grid-area: a;
+  background-color: red;
+}
+
+.grid-b {
+  grid-area: b;
+  background-color: blue;
+}
+
+.grid-c {
+  grid-area: c;
+  background-color: green;
+}
+
+.grid-d {
+  grid-area: d;
+  background-color: yellow;
+}
+
+.calc {
+  height: auto;
+  width: auto;
+  min-width: fit-content;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--blue-100);
+  border: 1px solid black;
+}
+.calc--results {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=styles.css.map */

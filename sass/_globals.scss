@@ -1,14 +1,17 @@
 :root{
     --black: black;
     --white: white;
-    --grey-50: hsl(223, 35%, 81%);
-    --grey-100: hsl(219, 35%, 92%);
-    --grey-300: hsl(221, 22%, 81%);
-    --grey-500: hsl(219, 9%, 45%);
-    --grey-950: hsl(220, 13%, 13%);
 
-    --orange-300: hsl(25, 100%, 71%);
-    --orange-500: hsl(26, 100%, 55%);
+    --grey-500: hsl(215, 17%, 45%);
+    --grey-300: hsl(215, 43%, 77%);
+
+    --blue-100: hsl(228, 94%, 94%);  
+    --blue-300: hsl(209, 69%, 82%);
+    --blue-500: hsl(227, 92%, 58%);
+    --blue-900: hsl(215, 31%, 21%);
+
+    --gradient: linear-gradient(to right, hsl(183, 95%, 92%), hsl(216, 95%, 92%));
+
 
     [data-product='true'] {
         display: flex;
@@ -30,22 +33,27 @@
 
     --font-size-1: 9rem;         // 144px
     --font-size-2: 4rem;         // 64px
-    --font-size-3: 2.25rem;      // 36px
-    --font-size-4: 1.75rem;      // 28px
-    --font-size-5: 1.5rem;       // 24px
-    --font-size-6: 1.25rem;      // 20px
-    --font-size-7: 1rem;         // 16px
-    --font-size-8: .938rem;      // 15px
-    --font-size-9: .813rem;      // 13px
-    --font-size-10: .75rem;      // 12px
+    --font-size-3: 3rem;         // 48px
+    --font-size-4: 2.25rem;      // 36px
+    --font-size-5: 1.75rem;      // 32px
+    --font-size-6: 1.75rem;      // 28px
+    --font-size-7: 1.5rem;       // 24px
+    --font-size-8: 1.25rem;      // 20px
+    --font-size-9: 1rem;         // 16px
+    --font-size-10: .938rem;      // 15px
+    --font-size-11: .875rem;     // 14px
+    --font-size-12: .813rem;     // 13px
+    --font-size-13: .75rem;      // 12px
 
-    --line-height-1: 48px;
-    --line-height-2: 32px;       
-    --line-height-3: 26px;
+    --line-height-1: 110%;
+    --line-height-2: 120%;       
+    --line-height-3: 150%;
     --line-height-4: 16px;     
     --line-height-5: 15px;  
 
-    --letter-spacing: 0;
+    --letter-spacing-0: 0%;
+    --letter-spacing-1: -5%;
+
 
     --spacing-0: 0rem;           // 0px
     --spacing-10: 0.0625rem;     // 1px
@@ -57,9 +65,13 @@
     --spacing-400: 2rem;         // 32px
     --spacing-500: 2.5rem;       // 40px
     --spacing-600: 3rem;         // 48px
-    --spacing-700: 4rem;         // 64px    
+    --spacing-650: 3.5rem;       // 56px
+    --spacing-700: 4rem;         // 64px
+    --spacing-800: 4.5rem;       // 72px    
     --spacing-1000: 5rem;        // 80px
+    --spacing-1100: 5.5rem;      // 88px
     --spacing-1200: 6rem;        // 96px
+    --spacing-1300: 6.5rem;      // 104px
     --spacing-1500: 7.5rem;      // 120px
     --spacing-1600: 8rem;        // 128px
     --spacing-1800: 9rem;        // 144px
