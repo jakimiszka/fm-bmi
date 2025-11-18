@@ -1,14 +1,22 @@
 .calc{
+    position: relative;
+    top: -20%;
+
+
     height: auto;
-    width: auto;
+    width: 100%;
     min-width: fit-content;
     max-width: fit-content;
 
     display: flex;
+    display: none;
+
     flex-direction: column;
     align-items: flex-start;
+
     gap: 1rem;
     padding: 1rem;
+    margin-inline: 1rem;
     border-radius: 0.5rem;
     background-color: var(--blue-100);
     border: 1px solid black;
@@ -20,7 +28,7 @@
         align-items: center;
         gap: 1rem;
         
-         &--bmi{
+        &--bmi{
 
         }
         &--note{

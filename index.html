@@ -9,74 +9,79 @@
   <title>Frontend Mentor | Body Mass Index Calculator</title>
 </head>
 <body>
-  <div class="calc">
-    <h2>Enter your details below</h2>
-    <div class="inputs">
-      <div class="calc--metric">
-        <div class="calc--metric__radio">
-          <input type="radio" name="system" id="metric">
-          <label for="metric">Metric</label>
+  <main class="container">
+    <article class="header">
+      <div class="header--title">
+        <div class="header--title__logo">
+          <img src="./assets/images/logo.svg" alt="logo">
         </div>
-        <div class="calc--metric__height">
-          <label for="height">Height</label>
-          <input type="number" name="height" id="height">
+        <h1>Body Mass Index Calculator</h1>
+        <p>
+          Better understand your weight in relation to your height using our 
+          body mass index (BM) calculator. While BMI is not the sole determinant 
+          of a healthy weight, it offers a valuable starting point to evaluate 
+          your overall health and well-being.
+        </p>
+      </div>
+      <div class="header--spacer">
+        <!-- TODO -->
+      </div>
+      <div class="calc">
+        <h2>Enter your details below</h2>
+        <div class="inputs">
+          <div class="calc--metric">
+            <div class="calc--metric__radio">
+              <input type="radio" name="system" id="metric">
+              <label for="metric">Metric</label>
+            </div>
+            <div class="calc--metric__height">
+              <label for="height">Height</label>
+              <input type="number" name="height" id="height">
+            </div>
+            <div class="calc--metric__weight">
+              <label for="weight">Weight</label>
+              <input type="number" name="weight" id="weight">
+            </div>
+          </div>
+
+
+          <div class="calc--imperial">
+            <div class="calc--imperial__radio">
+              <input type="radio" name="system" id="imperial">
+              <label for="imperial">Imperial</label>
+            </div>
+            <div class="calc--imperial__height">
+              <label for="height">Height</label>
+              <input type="number" name="height" id="height">
+            </div>
+            <div class="calc--imperial__weight">
+              <label for="weight">Weight</label>
+              <input type="number" name="weight" id="weight">
+            </div>
+          </div>
         </div>
-        <div class="calc--metric__weight">
-          <label for="weight">Weight</label>
-          <input type="number" name="weight" id="weight">
+        <div class="calc--results">
+          <div class="calc--results--bmi">
+            Your BMI is...</br>
+            <h1>22.2</h1>
+          </div>
+          <div class="calc--results--note">
+              Your BMI suggests you're...</br>
+              Your ideal weight is between...</br>
+                18.5
+                - 
+                24.9 
+          </div>
         </div>
       </div>
+    </article>
+    <article class="mission">
 
+    </article>
+    <article class="limitations">
 
-      <div class="calc--imperial">
-        <div class="calc--imperial__radio">
-          <input type="radio" name="system" id="imperial">
-          <label for="imperial">Imperial</label>
-        </div>
-        <div class="calc--imperial__height">
-          <label for="height">Height</label>
-          <input type="number" name="height" id="height">
-        </div>
-        <div class="calc--imperial__weight">
-          <label for="weight">Weight</label>
-          <input type="number" name="weight" id="weight">
-        </div>
-      </div>
-    </div>
-     
-    
-    <div class="calc--results">
-      <div class="calc--results--bmi">
-        Your BMI is...</br>
-        <h1>22.2</h1>
-      </div>
-      <div class="calc--results--note">
-          Your BMI suggests you're...</br>
-          Your ideal weight is between...</br>
-            18.5
-            - 
-            24.9 
-      </div>
-    </div>
-    
-  </div>
-
-  <div class="container">
-    <div class="grid">
-      <div class="grid-a"></div>
-      <div class="grid-b"></div>
-      <div class="grid-c"></div>
-      <div class="grid-d"></div>
-    </div>
-  </div>
-  
-  Body Mass Index Calculator
-
-  Better understand your weight in relation to your height using our 
-  body mass index (BM) calculator. While BMI is not the sole determinant 
-  of a healthy weight, it offers a valuable starting point to evaluate 
-  your overall health and well-being.
-
+    </article>
+  </main>
   Enter your details below
 
   Metric
@@ -141,5 +146,8 @@
   lower BMIs than others. To learn more, it is advised to discuss this with your 
   GP or practice nurse.
 
+
+  
+  <script defer src="./script.js"></script>
 </body>
 </html>

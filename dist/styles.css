@@ -109,6 +109,7 @@ ul {
 /*  Mobile first  */
 .container {
   height: 100vh;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -117,7 +118,6 @@ ul {
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  min-width: 320px;
 }
 @media (min-width: 820px) {
   .container {
@@ -130,46 +130,37 @@ ul {
   }
 }
 
-.grid {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-areas: "a b b" "c d d" "c d d";
+.header {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
   border: 1px solid black;
   border-radius: 0.5rem;
+  padding: 1rem;
 }
-
-.grid-a {
-  grid-area: a;
-  background-color: red;
-}
-
-.grid-b {
-  grid-area: b;
-  background-color: blue;
-}
-
-.grid-c {
-  grid-area: c;
-  background-color: green;
-}
-
-.grid-d {
-  grid-area: d;
-  background-color: yellow;
+.header--spacer {
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey-300);
 }
 
 .calc {
+  position: relative;
+  top: -20%;
   height: auto;
-  width: auto;
+  width: 100%;
   min-width: fit-content;
   max-width: fit-content;
   display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
+  margin-inline: 1rem;
   border-radius: 0.5rem;
   background-color: var(--blue-100);
   border: 1px solid black;
