@@ -29,10 +29,14 @@
       <div class="calc">
         <h2>Enter your details below</h2>
         <div class="calc--system">
-            <input type="radio" name="system" id="metric">
-            <label for="metric">Metric</label>
-            <input type="radio" name="system" id="imperial">
-            <label for="imperial">Imperial</label>
+            <div class="calc--system__metric">
+              <input type="radio" name="system" id="metric">
+              <label calss="metric_lbl" for="metric">Metric</label>
+            </div>
+            <div class="calc--system__imperial">
+              <input type="radio" name="system" id="imperial">
+              <label calss="imperial_lbl" for="imperial">Imperial</label>
+            </div>
         </div>
         <div class="calc--form">
           <div class="calc--form__height">
