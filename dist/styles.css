@@ -105,7 +105,6 @@ ul {
   border: none;
   opacity: 1;
 }
-
 /*  Mobile first  */
 .container {
   height: 100vh;
@@ -207,6 +206,57 @@ ul {
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
+}
+.calc--form__height__inputs--imperial {
+  padding-top: 1rem;
+  display: none;
+  justify-content: space-around;
+}
+.calc--form__height__inputs--imperial input {
+  width: 40%;
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  text-align: center;
+}
+.calc--form__height__inputs--metric {
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.calc--form__height__inputs--metric input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  text-align: center;
+}
+.calc--form__weight__inputs--imperial {
+  padding-top: 1rem;
+  display: none;
+  justify-content: space-around;
+}
+.calc--form__weight__inputs--imperial input {
+  width: 40%;
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  text-align: center;
+}
+.calc--form__weight__inputs--metric {
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.calc--form__weight__inputs--metric input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  text-align: center;
 }
 .calc--results {
   width: 100%;

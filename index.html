@@ -30,7 +30,7 @@
         <h2>Enter your details below</h2>
         <div class="calc--system">
             <div class="calc--system__metric">
-              <input type="radio" name="system" id="metric">
+              <input type="radio" name="system" id="metric" checked>
               <label calss="metric_lbl" for="metric">Metric</label>
             </div>
             <div class="calc--system__imperial">
@@ -41,17 +41,23 @@
         <div class="calc--form">
           <div class="calc--form__height">
             <label for="height">Height</label>
-            <div class="inputs">
+            <div class="calc--form__height__inputs--imperial">
               <input type="number" name="height" id="height_1">
               <input type="number" name="height" id="height_2">
             </div>
+             <div class="calc--form__height__inputs--metric">
+              <input type="number" name="height" id="height_3">
+             </div>
           </div>
           <div class="calc--form__weight">
-            <label for="height">Weight</label>
-            <div class="inputs">
+            <label for="weight">Weight</label>
+            <div class="calc--form__weight__inputs--imperial">
               <input type="number" name="weight" id="weight_1">
               <input type="number" name="weight" id="weight_2">
             </div>
+             <div class="calc--form__weight__inputs--metric">
+              <input type="number" name="weight" id="weight_3">
+             </div>
           </div>
         </div>
         <div class="calc--results">

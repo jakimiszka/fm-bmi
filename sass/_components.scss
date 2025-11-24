@@ -42,6 +42,66 @@
         align-items: flex-start;
         gap: 1rem;
 
+        &__height{
+            &__inputs{
+               &--imperial{
+                    padding-top: 1rem;
+                    display: none;
+                    justify-content: space-around;
+                    input{
+                        width: 40%;
+                        padding: 1rem;
+                        border: 1px solid var(--black);
+                        border-radius: 20px;
+                        text-align: center;
+                    }
+                }
+                &--metric{
+                    width: 100%;
+                    padding-top: 1rem;
+                    display: flex;
+                    flex: 1;
+                    justify-content: center;
+                    input{
+                        width: 100%;
+                        padding: 1rem;
+                        border: 1px solid var(--black);
+                        border-radius: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        &__weight{
+            &__inputs{
+                &--imperial{
+                    padding-top: 1rem;
+                    display: none;
+                    justify-content: space-around;
+                    input{
+                        width: 40%;
+                        padding: 1rem;
+                        border: 1px solid var(--black);
+                        border-radius: 20px;
+                        text-align: center;
+                    }
+                }
+                &--metric{
+                    width: 100%;
+                    padding-top: 1rem;
+                    display: flex;
+                    justify-content: space-around;
+                    input{
+                        width: 100%;
+                        padding: 1rem;
+                        border: 1px solid var(--black);
+                        border-radius: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
     }
     &--results{
         width: 100%;
@@ -112,3 +172,38 @@ input[type="radio"]:checked::before {
   transform: scale(1);
 
 }
+
+// input#metric:checked ~ .calc--form__weight__inputs--imperial {
+//    display: none;
+// }
+// input#metric:checked ~ .calc--form__height__inputs--imperial {
+//    display: none;
+// }
+
+// input#imperial:checked ~ .calc--form__weight__inputs--metric {
+//    display: none;
+// }
+// input#imperial:checked ~ .calc--form__height__inputs--metric {
+//    display: none;
+// }
+
+// .imperial{
+//     padding-top: 1rem;
+//     display: flex;
+//     justify-content: space-around;
+// }
+
+// input[type="number"] {
+//         width: 40%;
+//         padding: 1rem;
+//         border: 1px solid var(--black);
+//         border-radius: 20px;
+//         text-align: center;
+//     }
+//     input[type="text"] {
+//         width: 40%;
+//         padding: 1rem;
+//         border: 1px solid var(--black);
+//         border-radius: 20px;
+//         text-align: center;
+//     }
