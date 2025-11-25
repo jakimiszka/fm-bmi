@@ -1,8 +1,8 @@
 const clacForm = document.querySelector('.calc--form');
-const weightImperial = document.querySelector('.calc--form__weight__inputs--imperial');
-const heightImperial = document.querySelector('.calc--form__height__inputs--imperial');
-const weightMetric = document.querySelector('.calc--form__weight__inputs--metric');
-const heightMetric = document.querySelector('.calc--form__height__inputs--metric');
+const weightImperial = document.querySelector('.weight.inputs.imperial');
+const heightImperial = document.querySelector('.height.inputs.imperial');
+const weightMetric = document.querySelector('.weight.inputs.metric');
+const heightMetric = document.querySelector('.height.inputs.metric');
 
 document.querySelectorAll('input[type="radio"]').forEach(radio => {
   radio.addEventListener('change', function() {

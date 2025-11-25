@@ -4,7 +4,7 @@
     left: 0;
 
     height: auto;
-    min-width: fit-content;
+    min-width: 230px;
 
     display: flex;
     flex-direction: column;
@@ -41,67 +41,6 @@
         justify-content: center;
         align-items: flex-start;
         gap: 1rem;
-
-        &__height{
-            &__inputs{
-               &--imperial{
-                    padding-top: 1rem;
-                    display: none;
-                    justify-content: space-around;
-                    input{
-                        width: 40%;
-                        padding: 1rem;
-                        border: 1px solid var(--black);
-                        border-radius: 20px;
-                        text-align: center;
-                    }
-                }
-                &--metric{
-                    width: 100%;
-                    padding-top: 1rem;
-                    display: flex;
-                    flex: 1;
-                    justify-content: center;
-                    input{
-                        width: 100%;
-                        padding: 1rem;
-                        border: 1px solid var(--black);
-                        border-radius: 20px;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-        &__weight{
-            &__inputs{
-                &--imperial{
-                    padding-top: 1rem;
-                    display: none;
-                    justify-content: space-around;
-                    input{
-                        width: 40%;
-                        padding: 1rem;
-                        border: 1px solid var(--black);
-                        border-radius: 20px;
-                        text-align: center;
-                    }
-                }
-                &--metric{
-                    width: 100%;
-                    padding-top: 1rem;
-                    display: flex;
-                    justify-content: space-around;
-                    input{
-                        width: 100%;
-                        padding: 1rem;
-                        border: 1px solid var(--black);
-                        border-radius: 20px;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-
     }
     &--results{
         width: 100%;
@@ -129,10 +68,65 @@
 }
 
 .inputs{
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: flex-start;
+    // gap: .5rem;
+    // margin-top: 1rem;
+}
+
+.metric{
+    width: 100%;
+    margin-top: 1rem;
+    //display: inline-block;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #A9A9A9;
+    border-radius: 15px;
+}
+
+.imperial{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.height, .weight {
+    // width: 100%;
+}
+
+// .height_placeholder{
+//     display: inline;
+// }
+
+.height.inputs.metric > input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+  float: right;
+}
+
+.imperial > input{
+    font-size: 2rem;
+    width: 50%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 6px;
+}
+
+.metric > input{
+    // font-size: 2rem;
+    height: 50px;
+    padding: 0;
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.metric > label{
+    padding-inline: 1rem;
 }
 
 input[type="radio"] {
@@ -172,38 +166,3 @@ input[type="radio"]:checked::before {
   transform: scale(1);
 
 }
-
-// input#metric:checked ~ .calc--form__weight__inputs--imperial {
-//    display: none;
-// }
-// input#metric:checked ~ .calc--form__height__inputs--imperial {
-//    display: none;
-// }
-
-// input#imperial:checked ~ .calc--form__weight__inputs--metric {
-//    display: none;
-// }
-// input#imperial:checked ~ .calc--form__height__inputs--metric {
-//    display: none;
-// }
-
-// .imperial{
-//     padding-top: 1rem;
-//     display: flex;
-//     justify-content: space-around;
-// }
-
-// input[type="number"] {
-//         width: 40%;
-//         padding: 1rem;
-//         border: 1px solid var(--black);
-//         border-radius: 20px;
-//         text-align: center;
-//     }
-//     input[type="text"] {
-//         width: 40%;
-//         padding: 1rem;
-//         border: 1px solid var(--black);
-//         border-radius: 20px;
-//         text-align: center;
-//     }
