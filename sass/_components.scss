@@ -1,16 +1,17 @@
 .calc{
-    position: relative;
-    top: -25%;
-    left: 0;
-
     height: auto;
-    min-width: 230px;
+    min-width: 320px;
+    padding-inline: 1rem;
+    position: relative;
+    top: 20%;
+    z-index: 2;
+
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-
+    z-index: 0;
     padding: 1rem;
     margin-inline: 2rem;
     border-radius: 15px;
@@ -67,18 +68,10 @@
     }   
 }
 
-.inputs{
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: flex-start;
-    // gap: .5rem;
-    // margin-top: 1rem;
-}
 
 .metric{
     width: 100%;
     margin-top: 1rem;
-    //display: inline-block;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,12 +86,9 @@
     justify-content: center;
 }
 .height, .weight {
-    // width: 100%;
+
 }
 
-// .height_placeholder{
-//     display: inline;
-// }
 
 .height.inputs.metric > input::placeholder {
   font-weight: bold;
