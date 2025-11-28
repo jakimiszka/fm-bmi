@@ -8,8 +8,6 @@
     justify-content: space-between;
     align-items: center;
 
-    //gap: var(--spacing-200);
-    //gap: 500px;
     margin-left: auto;
     margin-right: auto;
     
@@ -81,7 +79,9 @@
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
+        margin-bottom: 2rem;
 
         &__card{
             display: flex;
@@ -91,11 +91,40 @@
     }
 }
 
+.title{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+.info{
+        text-align: center;
+        padding-inline: 1rem;
+        font-size: 1rem;
+}
+
+.goals{
+    background: #ffffff;
+    background: linear-gradient(94deg,rgba(255, 255, 255, 1) 0%, hsl(216, 95%, 92%) 100%);
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 50px hsl(216, 95%, 92%);
+    border-radius: 20px;
+}
+
+.card{
+    box-shadow: 0px 0px 50px hsl(216, 95%, 92%);
+    border-radius: 20px;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    gap: 1rem;
+}
+
 .icon{
     height: 50px;
     width: auto;
     display: flex;
     justify-content: flex-start;
+    gap: 1rem;
     img{
         height: 100%;
         width: auto;
