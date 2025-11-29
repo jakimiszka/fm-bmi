@@ -24,7 +24,7 @@
         </p>
         <div class="header--title__spacer">
 
-<div class="calc">
+        <div class="calc">
           <h2>Enter your details below</h2>
           <div class="calc--system">
               <div class="calc--system__metric">
@@ -37,25 +37,45 @@
               </div>
           </div>
           <div class="calc--form">
-            <div class="height">
-              <label for="height">Height</label>
-              <div class="height inputs imperial">
-                <input type="text" name="height" id="height_1">
-                <input type="text" name="height" id="height_2">
-              </div>
-              <div class="height inputs metric">
-                <input type="text" name="height" id="height_3">
-                <label class="height_placeholder" for="height">cm</label>
+            <div class="calc--form__metric">
+              <div class="calc--form__metric--height">
+                <label for="height">Height</label>
+                <div class="inputs">
+                  <input type="text" name="height" id="height_3">
+                  <label class="height_placeholder" for="height">cm</label>
+                </div>
+                <div class="calc--form__metric--weight">
+                  <label for="height">Weight</label>
+                  <div class="inputs">
+                    <input type="text" name="weight" id="weight_3">
+                    <label class="height_placeholder" for="height">kg</label>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="weight">
-              <label for="weight">Weight</label>
-              <div class="weight inputs imperial">
-                <input type="text" name="weight" id="weight_1">
-                <input type="text" name="weight" id="weight_2">
+            <div class="calc--form__imperial">
+              <div class="calc--form__imperial--height">
+                <label for="height">Height</label>
+                <div class="inputs">
+                  <input type="text" name="height" id="height_4">
+                  <label class="height_placeholder" for="height_5">ft</label>
+                </div>
+                 <div class="inputs">
+                  <input type="text" name="height" id="height_4">
+                  <label class="height_placeholder" for="height_5">in</label>
+                </div>
               </div>
-              <div class="weight inputs metric">
-                <input type="text" name="weight" id="weight_3">
+              <div class="calc--form__imperial--weight">
+                  <label for="weight">Weight</label>
+                  <div class="inputs">
+                    <input type="text" name="height" id="height_4">
+                    <label class="height_placeholder" for="height_5">st</label>
+                  </div>
+                  <div class="inputs">
+                    <input type="text" name="height" id="height_4">
+                    <label class="height_placeholder" for="height_5">lbs</label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -77,19 +97,23 @@
       </div>
     </article>
     <article class="mission">
-      <div class="mission--img">
-        <img src="./assets/images/image-man-eating.webp" alt="mian img"/>
+      <div class="mission_header">
+        <div class="mission_header--img">
+          <img src="./assets/images/image-man-eating.webp" alt="mian img"/>
+        </div>
+        <div class="mission_header--head">
+          <h1 class="mission_header__title title">What your BMI result means</h1>
+          <p class="mission_header__info">
+            A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a 
+            healthy weight may lower your chances of experiencing health issues later on, 
+            such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced 
+            fat and sugar content, incorporating ample fruits and vegetables. Additionally, 
+            strive for regular physical activity, ideally about 30 minutes daily for 
+            five days a week.
+          </p>
       </div>
-       <h1 class="mission--title title">What your BMI result means</h1>
-        <p class="mission--title info">
-          A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a 
-          healthy weight may lower your chances of experiencing health issues later on, 
-          such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced 
-          fat and sugar content, incorporating ample fruits and vegetables. Additionally, 
-          strive for regular physical activity, ideally about 30 minutes daily for 
-          five days a week.
-        </p>
-        <div class="mission--goals goals">
+      </div>      
+        <div class="mission--goals goals" id="eating">
           <div class="mission--goals__card">
             <div class="icon">
               <img src="./assets/images/icon-eating.svg" alt="mian img"/>
@@ -100,7 +124,7 @@
                 immunity, mental clarity, and mood.
             </p>
           </div>
-          <div class="mission--goals__card">
+          <div class="mission--goals__card" id="exercise">
             <div class="icon">
               <img src="./assets/images/icon-exercise.svg" alt="mian img"/>
             </div>
@@ -110,7 +134,7 @@
                 immunity, mental clarity, and mood.
             </p>
           </div>
-          <div class="mission--goals__card">
+          <div class="mission--goals__card" id="sleep">
             <div class="icon">
               <img src="./assets/images/icon-sleep.svg" alt="mian img"/>
             </div>
@@ -123,14 +147,16 @@
         </div>
     </article>
     <article class="limitations">
-         <h1 class="limitations--title title">Limitations of BMI</h1>
-        <p class="limitations--info info">
-          Although BMI is often a practical indicator of healthy weight, it is not suited for 
-          every person. Specific groups should carefully consider their BMI outcomes, and in 
-          certain cases, the measurement may not be beneficial to use.
-        </p>
         <div class="limitations--goals">
-          <div class="limitations--goals__card card">
+          <div class="limit_title">
+            <h1 class="limitations--title title">Limitations of BMI</h1>
+            <p class="limitations--info info">
+              Although BMI is often a practical indicator of healthy weight, it is not suited for 
+              every person. Specific groups should carefully consider their BMI outcomes, and in 
+              certain cases, the measurement may not be beneficial to use.
+            </p>
+         </div>
+          <div class="limitations--goals__card card" id="gender">
             <div class="icon">
               <img src="./assets/images/icon-gender.svg" alt="mian img"/>
               <h4>Gender</h4>
@@ -140,7 +166,7 @@
               a child's age and gender are considered when evaluating their BMI.
             </p>
           </div>
-         <div class="limitations--goals__card card">
+         <div class="limitations--goals__card card" id="age">
             <div class="icon">
               <img src="./assets/images/icon-age.svg" alt="mian img"/>
               <h4>Age</h4>
@@ -151,28 +177,29 @@
             </p>
           </div>
           
-          <div class="limitations--goals__card card">
+          <div class="limitations--goals__card card" id="pregnancy">
             <div class="icon">
               <img src="./assets/images/icon-pregnancy.svg" alt="mian img"/>
-              <h4>Muscle</h4>
-            </div>
-            <p>
-               BMI may misclassify muscular individuals as overweight or obese, as it doesn't 
-               differentiate muscle from fat.
-            </p>
-          </div>
-          <div class="limitations--goals__card card">
-            <div class="icon">
-              <img src="./assets/images/icon-muscle.svg" alt="mian img"/>
               <h4>Pregnancy</h4>
             </div>
             <p>
-             Expectant mothers experience weight gain due to their growing baby. Maintaining a 
+          
+               Expectant mothers experience weight gain due to their growing baby. Maintaining a 
               healthy pre-pregnancy BMI is advisable to minimise health risks for both mother 
               and child.
             </p>
           </div>
-          <div class="limitations--goals__card card">
+          <div class="limitations--goals__card card" id="muscle">
+            <div class="icon">
+              <img src="./assets/images/icon-muscle.svg" alt="mian img"/>
+              <h4>Muscle</h4>
+            </div>
+            <p>
+                  BMI may misclassify muscular individuals as overweight or obese, as it doesn't 
+               differentiate muscle from fat.
+            </p>
+          </div>
+          <div class="limitations--goals__card card" id="race">
             <div class="icon">
               <img src="./assets/images/icon-race.svg" alt="mian img"/>
               <h4>Race</h4>

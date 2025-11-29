@@ -175,10 +175,6 @@ ul {
 .limitations {
   width: inherit;
 }
-.mission img,
-.limitations img {
-  width: 100%;
-}
 .mission--goals,
 .limitations--goals {
   margin-top: 2rem;
@@ -195,10 +191,92 @@ ul {
   padding: 1rem;
 }
 
-.title {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
+@media (min-width: 1024px) {
+  .mission--goals {
+    flex-direction: row;
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 820px) {
+  .limitations--goals {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .limitations--goals .limit_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    grid-row: 1/1;
+    grid-column: 1/8;
+  }
+  .limitations--goals .limit_title h1 {
+    font-size: 3rem;
+  }
+  .limitations--goals .card {
+    width: 100%;
+    height: 100%;
+  }
+  .limitations--goals #gender {
+    grid-row: 1/1;
+    grid-column: 10/15;
+  }
+  .limitations--goals #age {
+    grid-row: 2/2;
+    grid-column: 7/12;
+  }
+  .limitations--goals #muscle {
+    grid-row: 2/2;
+    grid-column: 12/17;
+  }
+  .limitations--goals #pregnancy {
+    grid-row: 3/3;
+    grid-column: 10/15;
+  }
+  .limitations--goals #race {
+    grid-row: 3/3;
+    grid-column: 5/10;
+  }
+}
+
+.mission_header {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.mission_header--img {
+  width: 100%;
+  justify-self: flex-end;
+}
+.mission_header--img img {
+  width: 100%;
+  object-fit: contain;
+}
+@media (min-width: 820px) {
+  .mission_header {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 90%;
+  }
+  .mission_header--img {
+    width: 50%;
+    justify-self: flex-end;
+  }
+  .mission_header--img img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .mission_header--head {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
 }
 
 .info {
@@ -239,14 +317,17 @@ ul {
 
 .calc {
   height: auto;
+  width: auto;
   min-width: 320px;
+  max-width: 550px;
   padding-inline: 1rem;
   position: relative;
   top: 20%;
   z-index: 2;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   z-index: 0;
   padding: 1rem;
@@ -278,6 +359,11 @@ ul {
   align-items: flex-start;
   gap: 1rem;
 }
+.calc--form__imperial {
+  width: 100%;
+  display: none;
+  justify-content: center;
+}
 .calc--results {
   width: 100%;
   display: flex;
@@ -293,7 +379,7 @@ ul {
 .calc--results__bmi h1 {
   font-size: 3rem;
 }
-.metric {
+.inputs {
   width: 100%;
   margin-top: 1rem;
   display: flex;
@@ -302,31 +388,12 @@ ul {
   background-color: white;
   border: 1px solid #A9A9A9;
   border-radius: 15px;
+  margin-bottom: 1rem;
 }
 
-.imperial {
-  width: 100%;
-  display: none;
-  justify-content: center;
-}
-
-.height.inputs.metric > input::placeholder {
-  font-weight: bold;
-  opacity: 0.5;
-  color: red;
-  float: right;
-}
-
-.imperial > input {
-  font-size: 2rem;
-  width: 50%;
-  height: 50px;
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 6px;
-}
-
-.metric > input {
+.inputs > input {
+  font-size: 1rem;
+  padding-left: 1rem;
   height: 50px;
   padding: 0;
   width: 90%;
@@ -335,8 +402,11 @@ ul {
   outline: none;
 }
 
-.metric > label {
+.inputs > label {
   padding-inline: 1rem;
+  font-size: 1.5rem;
+  color: var(--blue-500);
+  font-weight: bold;
 }
 
 input[type=radio] {
