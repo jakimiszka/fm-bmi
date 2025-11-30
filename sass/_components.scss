@@ -145,14 +145,18 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
-
-        border-radius: 15px;
         padding: 1rem;
         background-color: var(--blue-500);
         color: var(--white);
+        border-radius: 20px;
 
-        @include breakpoint(large){
-
+        @include breakpoint(medium){
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2rem;
+            border-top-right-radius: 80px;
+            border-bottom-right-radius: 80px;
         }
 
         &__welcome{
@@ -172,6 +176,9 @@
         
         &__bmi{
             display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             h1{
                 font-size: 3rem;
             }
@@ -179,6 +186,7 @@
         }
         &__note{
             display: none;
+            text-align: left;
         }
     }   
 }
@@ -194,6 +202,7 @@
     border: 1px solid #A9A9A9;
     border-radius: 15px;
     margin-bottom: 1rem;
+    padding-left: 1rem;
 }
 
 .inputs > input{

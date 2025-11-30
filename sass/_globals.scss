@@ -13,22 +13,9 @@
     --gradient: linear-gradient(to right, white, hsl(216, 95%, 92%));
     //hsl(183, 95%, 92%)
 
-    [data-product='true'] {
-        display: flex;
-    }
-
-    [data-product='false'] {
-        display: none;
-    }
-
-    [data-selected='true'] {
-        border: 2px solid var(--orange-500);
-        opacity: 0.5;
-    }
-    [data-selected='false'] {
-        border: none;
-        opacity: 1;
-    }
+   [isValid='false']{
+    border: 2px solid red;
+   }
 
 
     --font-size-1: 9rem;         // 144px

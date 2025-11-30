@@ -29,7 +29,7 @@
         </div>
         <div class="calc">
           <h2>Enter your details below</h2>
-          <div class="calc--system">
+          <form class="calc--system">
               <div class="calc--system__metric">
                 <input type="radio" name="system" id="metric" checked>
                 <label calss="metric_lbl" for="metric">Metric</label>
@@ -38,20 +38,20 @@
                 <input type="radio" name="system" id="imperial">
                 <label calss="imperial_lbl" for="imperial">Imperial</label>
               </div>
-          </div>
+            </form>
           <div class="calc--form">
             <div class="calc--form__metric">
               <div class="calc--form__metric--height">
                 <label for="height">Height</label>
                 <div class="inputs">
-                  <input type="text" name="height" id="height_3">
+                  <input type="text" name="height" id="metric_height">
                   <label class="height_placeholder" for="height">cm</label>
                 </div>
               </div>
                <div class="calc--form__metric--weight">
                   <label for="height">Weight</label>
                   <div class="inputs">
-                    <input type="text" name="weight" id="weight_3">
+                    <input type="text" name="weight" id="metric_weight">
                     <label class="height_placeholder" for="height">kg</label>
                   </div>
                 </div>
@@ -60,22 +60,22 @@
               <div class="calc--form__imperial--height">
                 <label for="height">Height</label>
                 <div class="inputs">
-                  <input type="text" name="height" id="height_4">
+                  <input type="text" name="height" id="imperial_height_ft">
                   <label class="height_placeholder" for="height_5">ft</label>
                 </div>
                  <div class="inputs">
-                  <input type="text" name="height" id="height_4">
+                  <input type="text" name="height" id="imperial_height_in">
                   <label class="height_placeholder" for="height_5">in</label>
                 </div>
               </div>
               <div class="calc--form__imperial--weight">
                   <label for="weight">Weight</label>
                   <div class="inputs">
-                    <input type="text" name="height" id="height_4">
+                    <input type="text" name="height" id="imperial_weight_st">
                     <label class="height_placeholder" for="height_5">st</label>
                   </div>
                   <div class="inputs">
-                    <input type="text" name="height" id="height_4">
+                    <input type="text" name="height" id="imperial_weight_lbs">
                     <label class="height_placeholder" for="height_5">lbs</label>
                   </div>
                 </div>
