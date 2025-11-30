@@ -37,13 +37,17 @@ inputs.forEach(input => {
     const value = input.value;
     const parent = input.parentNode;
     const regexDecimals = RegExp(/^\d+(\.\d{0,2})?$/g);
+    const regexIntegers = /^\d+$/;
     const regexLetters = RegExp(/[^a-zA-Z]+/g);
 
     if(!regexLetters.test(Number(value))){
       input.value = '';
       parent.setAttribute('isValid', false);
     }
-    if(!regexDecimals.test(Number(value))){
+    if(systemMetric.checked && !regexDecimals.test(Number(value))){
+      input.value = '';
+      parent.setAttribute('isValid', false);
+    }else if(systemImperial.checked && !regexIntegers.test(value)){
       input.value = '';
       parent.setAttribute('isValid', false);
     }else{
@@ -63,16 +67,34 @@ inputs.forEach(input => {
       results_welcome.style.display = 'none';
       results_bmi.style.display = 'flex';
       results_note.style.display = 'flex';
+
+      //result and calculation here
+      //calculateBmi('metric', 185.5, 100);
     }else if(systemImperial.checked && imperialHeightFTValue && imperialHeightINValue && imperialWeightSTValue && imperialHeightLBSValue){
       results_welcome.style.display = 'none';
       results_bmi.style.display = 'flex';
       results_note.style.display = 'flex';
+
+      //result and calculation here
+      //calculateBmi('metric', 185.5, 100);
     }else{
       results_welcome.style.display = 'flex';
       results_bmi.style.display = 'none';
       results_note.style.display = 'none';
     }
-
-    
   });
 });
+
+function calculateBmi(system, weight, height){
+  const bmi = weight/((height)^2);
+  switch(system){
+    case 'metric':
+      console.log('metric BMI ...', bmi);
+      return bmi;
+    case 'imperial':
+      console.log('imperial BMI ...', bmi);
+      return bmi;
+    default:
+        break;
+  }
+}
