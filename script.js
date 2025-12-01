@@ -114,12 +114,14 @@ function calculateBmi(system, weight, height){
   
   if(system==='metric'){
     bmi_calc = Math.round(weight / Math.pow((height/100), 2));
-    start = Math.round(18.5 * Math.pow((height/100), 2));
-    stop = Math.round(25 * Math.pow((height/100), 2));
+    start = Math.round(18.5 * Math.pow((height/100), 2)) + ' kg';
+    stop = Math.round(25 * Math.pow((height/100), 2)) + ' kg';
   }else{
     bmi_calc = Math.round((weight/Math.pow((height),2))*703);
-    start = Math.round(18.5 * Math.pow((height/100), 2));
-    stop = Math.round(25 * Math.pow((height/100), 2));
+    start_st = parseFloat(18.5 * Math.pow((height/100), 2)).toFixed(2).split('.');
+    stop_st = parseFloat(25 * Math.pow((height/100), 2)).toFixed(2).split('.');
+    start = start_st[0] + ' st ' + start_st[1] + ' lbs';
+    stop = stop_st[0] + ' st ' + stop_st[1] + ' lbs';
   }
 
   if(bmi_calc > 0 && bmi_calc < 18.5)
