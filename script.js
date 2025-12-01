@@ -114,32 +114,32 @@ inputs.forEach(input => {
 });
 
 function calculateBmi(system, weight, height){
-  let bmi = 0;
+  let bmi_calc = 0;
   let start = 0;
   let stop = 0;
   
   if(system==='metric'){
-    bmi = Math.round(weight / Math.pow((height/100), 2));
+    bmi_calc = Math.round(weight / Math.pow((height/100), 2));
     start = Math.round(18.5 * Math.pow((height/100), 2));
     stop = Math.round(25 * Math.pow((height/100), 2));
   }else{
-    bmi = Math.round((weight/Math.pow((height),2))*703);
+    bmi_calc = Math.round((weight/Math.pow((height),2))*703);
     start = Math.round((18.5 * Math.pow((height/100), 2)) / 703);
     stop = Math.round((25 * Math.pow((height/100), 2)) / 703);
   }
 
-  if(bmi > 0 && bmi < 18.5)
-      return {category: 'underweight', bmi: bmi, start: start, stop:stop}
-  if(bmi > 18.5 && bmi < 25)
-      return {category: 'healthy weight', bmi: bmi, start: start, stop:stop}
-  if(bmi > 25 && bmi < 30)
-      return {category: 'overweight', bmi: bmi, start: start, stop:stop}
-  if(bmi > 30 && bmi < 35)
-      return {category: 'class 1 obesity', bmi: bmi, start: start, stop:stop}
-  if(bmi > 35 && bmi < 40)
-      return {category: 'class 2 obesity', bmi: bmi, start: start, stop:stop}
-  if(bmi > 40)
-      return {category: 'class 3 obesity', bmi: bmi, start: start, stop:stop}
+  if(bmi_calc > 0 && bmi_calc < 18.5)
+      return {category: 'underweight', bmi: bmi_calc, start: start, stop:stop}
+  if(bmi_calc > 18.5 && bmi_calc < 25)
+      return {category: 'healthy weight', bmi: bmi_calc, start: start, stop:stop}
+  if(bmi_calc > 25 && bmi_calc < 30)
+      return {category: 'overweight', bmi: bmi_calc, start: start, stop:stop}
+  if(bmi_calc > 30 && bmi_calc < 35)
+      return {category: 'class 1 obesity', bmi: bmi_calc, start: start, stop:stop}
+  if(bmi_calc > 35 && bmi_calc < 40)
+      return {category: 'class 2 obesity', bmi: bmi_calc, start: start, stop:stop}
+  if(bmi_calc > 40)
+      return {category: 'class 3 obesity', bmi: bmi_calc, start: start, stop:stop}
 }
 
 function resultsOnSystemSelected(){
@@ -164,8 +164,11 @@ function resultsOnSystemSelected(){
 }
 
 function setResults(results){
-  results_bmi_value.innerHTML = !!results.bmi ? results.bmi : 0;
-  results_note_category.innerHTML = results.category;
-  results_note_range_from.innerHTML = results.start;
-  results_note_range_to.innerHTML = results.stop;
+  if(!!results){
+    results_bmi_value.innerHTML = results.bmi;
+    results_note_category.innerHTML = results.category;
+    results_note_range_from.innerHTML = results.start;
+    results_note_range_to.innerHTML = results.stop;
+  }
+  
 }
