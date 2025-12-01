@@ -86,13 +86,10 @@ inputs.forEach(input => {
       results_bmi.style.display = 'flex';
       results_note.style.display = 'flex';
 
-      console.log('height: ', Number(metricHeight))
-      console.log('weight: ', Number(metricWeight))
       const ht = Number(metricHeight);
       const wt = Number(metricWeight);
-      const results = calculateBmi('metric', wt, ht);
-      console.log(results);
-      setResults(results);
+      const calc = calculateBmi('metric', wt, ht);
+      setResults(calc);
     }else if(systemImperial.checked && imperialHeightFTValue && imperialHeightINValue && imperialWeightSTValue && imperialHeightLBSValue){
       results_welcome.style.display = 'none';
       results_bmi.style.display = 'flex';
@@ -100,11 +97,8 @@ inputs.forEach(input => {
 
       const ht = Number(imperialHeightFT) * 12 + Number(imperialHeightIN);
       const wt = Number(imperialWeightST) * 14 + Number(imperialweightLBS);
-      console.log('height: (inches)', ht)
-      console.log('weight (lbs): ', wt)
-      const results = calculateBmi('imperial', wt, ht);
-      console.log(results);
-      setResults(results);
+      const calc = calculateBmi('imperial', wt, ht);
+      setResults(calc);
     }else{
       results_welcome.style.display = 'flex';
       results_bmi.style.display = 'none';
@@ -124,19 +118,19 @@ function calculateBmi(system, weight, height){
     stop = Math.round(25 * Math.pow((height/100), 2));
   }else{
     bmi_calc = Math.round((weight/Math.pow((height),2))*703);
-    start = Math.round((18.5 * Math.pow((height/100), 2)) / 703);
-    stop = Math.round((25 * Math.pow((height/100), 2)) / 703);
+    start = Math.round(18.5 * Math.pow((height/100), 2));
+    stop = Math.round(25 * Math.pow((height/100), 2));
   }
 
   if(bmi_calc > 0 && bmi_calc < 18.5)
       return {category: 'underweight', bmi: bmi_calc, start: start, stop:stop}
-  if(bmi_calc > 18.5 && bmi_calc < 25)
+  if(bmi_calc > 18.5 && bmi_calc <= 25)
       return {category: 'healthy weight', bmi: bmi_calc, start: start, stop:stop}
-  if(bmi_calc > 25 && bmi_calc < 30)
+  if(bmi_calc > 25 && bmi_calc <= 30)
       return {category: 'overweight', bmi: bmi_calc, start: start, stop:stop}
-  if(bmi_calc > 30 && bmi_calc < 35)
+  if(bmi_calc > 30 && bmi_calc <= 35)
       return {category: 'class 1 obesity', bmi: bmi_calc, start: start, stop:stop}
-  if(bmi_calc > 35 && bmi_calc < 40)
+  if(bmi_calc > 35 && bmi_calc <= 40)
       return {category: 'class 2 obesity', bmi: bmi_calc, start: start, stop:stop}
   if(bmi_calc > 40)
       return {category: 'class 3 obesity', bmi: bmi_calc, start: start, stop:stop}
@@ -155,7 +149,6 @@ function resultsOnSystemSelected(){
         results_bmi.style.display = 'none';
         results_note.style.display = 'none';
     }
-
     if(systemMetric.checked && !imperialHeightFT && !imperialHeightIN && !imperialWeightST && !imperialweightLBS){
         results_welcome.style.display = 'flex';
         results_bmi.style.display = 'none';
@@ -170,5 +163,4 @@ function setResults(results){
     results_note_range_from.innerHTML = results.start;
     results_note_range_to.innerHTML = results.stop;
   }
-  
 }
