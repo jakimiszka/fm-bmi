@@ -57,8 +57,8 @@
                 </div>
             </div>
             <div class="calc--form__imperial">
+              <label for="height">Height</label>
               <div class="calc--form__imperial--height">
-                <label for="height">Height</label>
                 <div class="inputs">
                   <input type="text" name="height" id="imperial_height_ft">
                   <label class="height_placeholder" for="imperial_height_ft">ft</label>
@@ -68,8 +68,8 @@
                   <label class="height_placeholder" for="imperial_height_in">in</label>
                 </div>
               </div>
+              <label for="weight">Weight</label>
               <div class="calc--form__imperial--weight">
-                  <label for="weight">Weight</label>
                   <div class="inputs">
                     <input type="text" name="height" id="imperial_weight_st">
                     <label class="height_placeholder" for="imperial_weight_st">st</label>
@@ -91,11 +91,11 @@
                 <h1>22.2</h1>
               </div>
               <div class="calc--results__note">
-                  Your BMI suggests you're...</br>
+                  <span>Your BMI suggests you're <a id="bmi_note"></a></br>
                   Your ideal weight is between...</br>
-                    18.5
+                    <a id="bmi_range_from">18.5</a>
                     - 
-                    24.9 
+                    <a id="bmi_range_to">24.9</a></span>
               </div>
           </div>
         </div>

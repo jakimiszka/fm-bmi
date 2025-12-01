@@ -73,10 +73,6 @@
                     flex-direction: column;
                     align-items: flex-start;
                     width: 50%;
-
-                    label{
-                        
-                    }
                 }
             }
 
@@ -89,11 +85,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    width: 50%;
-
-                    label{
-                        
-                    }
+                    width: 100%;
                 }
             }
 
@@ -103,38 +95,34 @@
                 flex-direction: column;
                 align-items: flex-start;
                 width: 100%;
-
-                label{
-                    
-                }
             }
         }
 
         &__imperial{
             width: 100%;
             display: none;
-            align-items: flex-start;
-            gap: 1rem;
+            flex-direction: column;
+            text-align: left;
 
-            @include breakpoint(large){
+            &--height, 
+            &--weight{
+                display: flex;
                 flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
                 gap: 1rem;
+            }
+
+            @include breakpoint(medium){
+                flex-direction: column;
 
                 &--height, 
                 &--weight{
                     display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    width: 50%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
                 }
-            }
-            
-            &--height{
-
-            }
-
-            &--weight{
-
             }
         }
     }
@@ -186,9 +174,17 @@
         }
         &__note{
             display: none;
+            flex-direction: column;
+            align-items: center;
             text-align: left;
         }
     }   
+}
+
+#bmi_note,
+#bmi_range_from,
+#bmi_range_to{
+    font-weight: bold;
 }
 
 
