@@ -20,26 +20,37 @@ const metric = document.querySelector('.calc--form__metric');
 // all inputs
 const inputs = document.querySelectorAll('input[type="text"]');
 // metric inputs
-const metric_height_input = document.querySelector('input#metric_height');
-const metric_weight_input = document.querySelector('input#metric_weight');
+const metric_height_input = metric.querySelector('input#metric_height');
+const metric_weight_input = metric.querySelector('input#metric_weight');
 // imperial inputs
-const imperial_height_ft = document.querySelector('input#imperial_height_ft');
-const imperial_height_in = document.querySelector('input#imperial_height_in');
-const imperial_weight_st = document.querySelector('input#imperial_weight_st');
-const imperial_weight_lbs = document.querySelector('input#imperial_weight_lbs');
+const imperial_height_ft = imperial.querySelector('input#imperial_height_ft');
+const imperial_height_in = imperial.querySelector('input#imperial_height_in');
+const imperial_weight_st = imperial.querySelector('input#imperial_weight_st');
+const imperial_weight_lbs = imperial.querySelector('input#imperial_weight_lbs');
 
 document.querySelectorAll('input[type="radio"]').forEach(radio => {
   radio.addEventListener('change', function() {
-
-    resultsOnSystemSelected();
-
     if (radio.id === 'metric') {
       imperial.style.display = 'none';
       metric.style.display = 'flex';
-
+      
+      metric_height_input.value = '';
+      metric_weight_input.value = '';
+      results_welcome.style.display = 'flex';
+      results_bmi.style.display = 'none';
+      results_note.style.display = 'none';
     } else if (radio.id === 'imperial') {
        imperial.style.display = 'flex';
        metric.style.display = 'none';
+
+      imperial_height_ft.value = '';
+      imperial_height_in.value = '';
+      imperial_weight_st.value = '';
+      imperial_weight_lbs.value = '';
+      
+      results_welcome.style.display = 'flex';
+      results_bmi.style.display = 'none';
+      results_note.style.display = 'none';
     }
   });
 });
